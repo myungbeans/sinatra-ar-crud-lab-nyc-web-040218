@@ -1,0 +1,10 @@
+<h1>Index Page</h1>
+<% if @posts.length == 0 %>
+    <p><%= "You Have No Posts Yet" %></p>
+<% else %>
+    <% @posts.each do |post|%>
+    <p>My id is <%= post.id%></p>
+    <p>My name is <%= post.name %></p>
+    <p>Here is my content: <%= post.content %></p>
+    <% end %>
+<% end %>

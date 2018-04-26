@@ -1,0 +1,9 @@
+<h1>Welcome to the Show View</h1>
+    <p>My id is <%= @post.id%></p>
+    <p>My name is <%= @post.name %></p>
+    <p>Here is my content: <%= @post.content %></p>
+
+<form method="post" action="/posts/<%= @post.id %>/delete">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+</form>
